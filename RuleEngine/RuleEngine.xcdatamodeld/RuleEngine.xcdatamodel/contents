@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AppBadges" representedClassName=".AppBadges" syncable="YES" codeGenerationType="class">
+        <attribute name="badgeCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="badgeName" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="AppNotification" representedClassName=".AppNotification" syncable="YES" codeGenerationType="class">
+        <attribute name="deleteOnView" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="expiry" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="loadingTime" optional="YES" attributeType="String"/>
+        <attribute name="loadingTimeZone" optional="YES" attributeType="String"/>
+        <attribute name="message" optional="YES" attributeType="String"/>
+        <attribute name="notificationId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="originatedSource" optional="YES" attributeType="String"/>
+        <attribute name="originatedTime" optional="YES" attributeType="String"/>
+        <attribute name="originatedTimeZone" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="viewCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="notificationId"/>
+                <constraint value="originatedSource"/>
+                <constraint value="originatedTime"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Study" representedClassName=".Study" syncable="YES" codeGenerationType="class">
+        <attribute name="iconUrl" optional="YES" attributeType="String"/>
+        <attribute name="instruction" optional="YES" attributeType="String"/>
+        <attribute name="modificationTime" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="state" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="studyDescription" optional="YES" attributeType="String"/>
+        <attribute name="studyId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="studyId"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Survey" representedClassName=".Survey" syncable="YES" codeGenerationType="class">
+        <attribute name="cycleEndTime" optional="YES" attributeType="String"/>
+        <attribute name="cycleIdentifier" optional="YES" attributeType="String"/>
+        <attribute name="cycleStartTime" optional="YES" attributeType="String"/>
+        <attribute name="endTime" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="notified" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="participated" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="publishTime" optional="YES" attributeType="String"/>
+        <attribute name="scheduleCode" optional="YES" attributeType="String"/>
+        <attribute name="startTime" optional="YES" attributeType="String"/>
+        <attribute name="studyId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="studyName" optional="YES" attributeType="String"/>
+        <attribute name="surveyDesc" optional="YES" attributeType="String"/>
+        <attribute name="surveyId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="totalParticipation" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="version" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="SurveyResponse" representedClassName=".SurveyResponse" syncable="YES" codeGenerationType="class">
+        <attribute name="answer" optional="YES" attributeType="String"/>
+        <attribute name="answerType" optional="YES" attributeType="String"/>
+        <attribute name="comment" optional="YES" attributeType="String"/>
+        <attribute name="objectUrl" optional="YES" attributeType="String"/>
+        <attribute name="studyId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="submissionTime" optional="YES" attributeType="String"/>
+        <attribute name="submissionTimeZone" optional="YES" attributeType="String"/>
+        <attribute name="surveyId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="taskId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="version" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="studyId"/>
+                <constraint value="surveyId"/>
+                <constraint value="taskId"/>
+                <constraint value="version"/>
+                <constraint value="submissionTime"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Task" representedClassName=".Task" syncable="YES" codeGenerationType="class">
+        <attribute name="childTriggeringInput" optional="YES" attributeType="String"/>
+        <attribute name="defaultInput" optional="YES" attributeType="String"/>
+        <attribute name="hasChild" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="hasComment" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="hasUrl" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isActive" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isRequired" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="orderId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="parentTaskId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="possibleInput" optional="YES" attributeType="String"/>
+        <attribute name="studyId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="surveyId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="taskId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="text" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="AppBadges" positionX="0" positionY="45" width="128" height="73"/>
+        <element name="AppNotification" positionX="-54" positionY="-9" width="128" height="208"/>
+        <element name="Study" positionX="18" positionY="63" width="128" height="148"/>
+        <element name="Survey" positionX="-18" positionY="27" width="128" height="283"/>
+        <element name="SurveyResponse" positionX="-63" positionY="-18" width="128" height="193"/>
+        <element name="Task" positionX="-36" positionY="9" width="128" height="268"/>
+    </elements>
+</model>
