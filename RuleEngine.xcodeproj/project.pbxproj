@@ -23,12 +23,17 @@
 		DD399B1E252FEBDF00DB1B8B /* Sources.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD399B1D252FEBDF00DB1B8B /* Sources.swift */; };
 		DD399B20252FEC2400DB1B8B /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD399B1F252FEC2400DB1B8B /* Actions.swift */; };
 		DD399B22253018EE00DB1B8B /* RuleEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD399B21253018EE00DB1B8B /* RuleEngine.swift */; };
+		DD43C60C255A401600DB0005 /* ContextTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD43C60B255A401600DB0005 /* ContextTree.swift */; };
+		DD7EB7DF2554A00100D78884 /* ClassFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7EB7DE2554A00100D78884 /* ClassFactory.swift */; };
 		DD8E59EA2549F55C00D202E9 /* KeepAliveByLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8E59E92549F55C00D202E9 /* KeepAliveByLocationManager.swift */; };
+		DD8E59F1254F3F7B00D202E9 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8E59F0254F3F7B00D202E9 /* DataLoader.swift */; };
+		DD8E59F4254F465600D202E9 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8E59F3254F465600D202E9 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		42F3E7C199AED6E23DDCE801 /* Pods-RuleEngine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuleEngine.debug.xcconfig"; path = "Target Support Files/Pods-RuleEngine/Pods-RuleEngine.debug.xcconfig"; sourceTree = "<group>"; };
 		C000B553643BB7B40BD07B67 /* Pods-RuleEngine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuleEngine.release.xcconfig"; path = "Target Support Files/Pods-RuleEngine/Pods-RuleEngine.release.xcconfig"; sourceTree = "<group>"; };
+		DD339B85254FF2070079FD6D /* RuleEngine 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "RuleEngine 2.xcdatamodel"; sourceTree = "<group>"; };
 		DD399AF6252D562300DB1B8B /* RuleEngine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuleEngine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD399AF9252D562300DB1B8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD399AFD252D562300DB1B8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,7 +52,11 @@
 		DD399B1D252FEBDF00DB1B8B /* Sources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources.swift; sourceTree = "<group>"; };
 		DD399B1F252FEC2400DB1B8B /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
 		DD399B21253018EE00DB1B8B /* RuleEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleEngine.swift; sourceTree = "<group>"; };
+		DD43C60B255A401600DB0005 /* ContextTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextTree.swift; sourceTree = "<group>"; };
+		DD7EB7DE2554A00100D78884 /* ClassFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassFactory.swift; sourceTree = "<group>"; };
 		DD8E59E92549F55C00D202E9 /* KeepAliveByLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeepAliveByLocationManager.swift; sourceTree = "<group>"; };
+		DD8E59F0254F3F7B00D202E9 /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
+		DD8E59F3254F465600D202E9 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		DFDC00089554B7E7E5FF4037 /* Pods_RuleEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RuleEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -111,6 +120,10 @@
 				DD399B1D252FEBDF00DB1B8B /* Sources.swift */,
 				DD399B1F252FEC2400DB1B8B /* Actions.swift */,
 				DD399B21253018EE00DB1B8B /* RuleEngine.swift */,
+				DD8E59F0254F3F7B00D202E9 /* DataLoader.swift */,
+				DD8E59F3254F465600D202E9 /* LoadingView.swift */,
+				DD7EB7DE2554A00100D78884 /* ClassFactory.swift */,
+				DD43C60B255A401600DB0005 /* ContextTree.swift */,
 			);
 			path = RuleEngine;
 			sourceTree = "<group>";
@@ -245,12 +258,16 @@
 				DD399AFE252D562300DB1B8B /* ViewController.swift in Sources */,
 				DD399B20252FEC2400DB1B8B /* Actions.swift in Sources */,
 				DD399B04252D562400DB1B8B /* RuleEngine.xcdatamodeld in Sources */,
+				DD7EB7DF2554A00100D78884 /* ClassFactory.swift in Sources */,
 				DD399B1E252FEBDF00DB1B8B /* Sources.swift in Sources */,
+				DD8E59F4254F465600D202E9 /* LoadingView.swift in Sources */,
 				DD399AFA252D562300DB1B8B /* AppDelegate.swift in Sources */,
 				DD8E59EA2549F55C00D202E9 /* KeepAliveByLocationManager.swift in Sources */,
 				DD399B22253018EE00DB1B8B /* RuleEngine.swift in Sources */,
+				DD43C60C255A401600DB0005 /* ContextTree.swift in Sources */,
 				DD399B12252D6EEB00DB1B8B /* Logger.swift in Sources */,
 				DD399B1A252FEA6500DB1B8B /* CommonStructs.swift in Sources */,
+				DD8E59F1254F3F7B00D202E9 /* DataLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,9 +476,10 @@
 		DD399B02252D562400DB1B8B /* RuleEngine.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				DD339B85254FF2070079FD6D /* RuleEngine 2.xcdatamodel */,
 				DD399B03252D562400DB1B8B /* RuleEngine.xcdatamodel */,
 			);
-			currentVersion = DD399B03252D562400DB1B8B /* RuleEngine.xcdatamodel */;
+			currentVersion = DD339B85254FF2070079FD6D /* RuleEngine 2.xcdatamodel */;
 			path = RuleEngine.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

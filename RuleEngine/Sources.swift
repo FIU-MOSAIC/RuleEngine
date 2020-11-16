@@ -234,9 +234,9 @@ class NetworkSource:BaseSource{
                     bssid = ""
                 }
             }
-            values["connectivity"] = "wifi"
-            values["ssid"] = ssid
-            values["bssid"] = bssid
+            values["\(eventSource.name).connectivity"] = "wifi"
+            values["\(eventSource.name).ssid"] = ssid
+            values["\(eventSource.name).bssid"] = bssid
             self.post(data: EventData(values: values))
             break
         case .none, .unavailable:
@@ -260,15 +260,9 @@ class AccelerometerSource:BaseSource{
     init(instanceId:String, eventSource:EventSourceStruct) {
         self.instanceId = instanceId
         self.eventSource = eventSource
-        if let params = eventSource.params{
-            for param in params{
-                if param.name == frequencyParamName{
-                    if let value = param.value{
-                        frequency = Double(value) ?? 0
-                    }else{
-                        //TODO: raise an error of wrong data type
-                    }
-                }
+        for param in eventSource.params{
+            if param.name == frequencyParamName{
+                frequency = Double(param.value) ?? 0
             }
         }
     }

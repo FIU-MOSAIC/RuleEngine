@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="SensorConfig" representedClassName=".SensorConfig" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="lifecycle" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="state" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="studyId" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="version" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
     <entity name="Study" representedClassName=".Study" syncable="YES" codeGenerationType="class">
         <attribute name="iconUrl" optional="YES" attributeType="String"/>
         <attribute name="instruction" optional="YES" attributeType="String"/>
@@ -33,5 +45,6 @@
     <elements>
         <element name="Study" positionX="18" positionY="63" width="128" height="148"/>
         <element name="TriggerActionMapping" positionX="-18" positionY="126" width="128" height="178"/>
+        <element name="SensorConfig" positionX="18" positionY="180" width="128" height="118"/>
     </elements>
 </model>

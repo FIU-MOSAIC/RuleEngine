@@ -9,20 +9,18 @@
 import UIKit
 import CoreData
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
-    
+    var engine:RuleEngine?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         KeepAliveByLocationManager.sharedInstance.startLocationToKeepAlive()
-        RuleEngine.sharedInstance.start()
-        
+        engine = RuleEngine.sharedInstance
         return true
     }
 
@@ -53,6 +51,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         })
         return container
+    }()
+    
+    lazy var managedContext: NSManagedObjectContext = {
+        let container = self.persistentContainer
+        return container.viewContext
     }()
 
     // MARK: - Core Data Saving support
